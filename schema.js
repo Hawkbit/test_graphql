@@ -55,7 +55,7 @@ module.exports = new GraphQLSchema({
           id: { type: GraphQLInt }
         },
         resolve: (root, args) => fetch(
-          `https://www.goodreads.com/author/show.xml?id=${args.id}&key=YHmIJxhpvq1gN9mmgYVjbA`
+          `https://www.goodreads.com/author/show.xml?id=${args.id}&key=askmeformykey`
         )
         .then(response => response.text())
         .then(parseXML)
